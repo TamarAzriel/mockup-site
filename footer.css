@@ -1,0 +1,97 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    direction: ltr;
+}
+
+.pagination .page {
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #203b3e;
+    color: #203b3e;
+    text-decoration: none;
+    font-family: "almoni-d", sans-serif;
+}
+
+.pagination .page.active {
+    background-color: #203b3e;
+    color: white;
+}
+
+.pagination .page:hover {
+    background-color: #203b3e;
+    color: white;
+}
+
+.pagination .next-page {
+    color: #c90020;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    direction: ltr;
+}
+
+.pagination-line {
+    flex: 1;
+    border-bottom: 1px solid #203b3e;
+}
+
+.footer-links {
+    background-color: #c90020;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    direction: rtl;
+    padding: 10px;
+    row-gap: 5px;
+}
+
+.footer-links a {
+    font-family: 'Heebo', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 0 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-links a:last-child {
+    border-left: none;
+}
+
+.footer-links {
+    margin-top: 65px;
+}
+
+.footer-links::after {
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #203b3e;
+}
+
+.footer-links {
+    position: relative;
+}
