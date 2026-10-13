@@ -1,13 +1,14 @@
 .first-box {
     margin-left:30%;
     display: flex;
-    width: 70%;
+    width: 50%;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #F1F2F2;
     gap: 15px;
     padding: 15px;
     box-sizing: border-box;
+    margin-right: 10%;
 }
 
 
@@ -15,15 +16,16 @@
     margin-left:30%;
     display: flex;
     gap: 19px;
-    width: 70%;
+    width: 50%;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #F1F2F2;
+    margin-right: 10%;
 
 }
 /* יצירת אזור טקסט אנכי לצד התמונה */
 .inner-first-box {
-    width: 49%;
+    width: 48%;
     display: flex;
     gap: 16px; /* מבוסס על ה--gap של האתר המקורי */
     align-items: flex-start;
@@ -36,8 +38,8 @@
 
 
 .inner-first-box img {
-    width: 60%;
-    height: auto;
+    width: 55%;
+    height: 90%;
     object-fit: cover;
 }
 
@@ -47,7 +49,7 @@
     background: #C4091E; /* או var(--red) */
     padding: 2px 5px;
     width: fit-content;
-    font-size: 16px;
+    font-size: 13px;
     color: #fff;
     font-weight: 400;
     font-family: var(--font, "almoni-tzar", sans-serif);
@@ -57,7 +59,7 @@
 .text-content p {
     font-family: var(--font, "almoni-tzar", sans-serif);
     font-weight: 400;
-    font-size: 17px; /* או שימוש במשתנה var(--h3-size) */
+    font-size: 13px; /* או שימוש במשתנה var(--h3-size) */
     line-height: 1.2;
     color: #05090A; /* צבע הטקסט המקורי מהאתר */
     background-color: transparent; /* אם תרצי בלי רקע אדום כללי */
@@ -93,10 +95,26 @@
 }
 
 .text-content.right p{
-        font-size: 25px;
+        font-size: 19px;
 }
 
 
+.middel{
+    width: 50%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.moddle-part{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-sidebar{
+    width: 25%;
+}
 
 
 

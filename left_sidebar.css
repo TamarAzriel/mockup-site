@@ -1,0 +1,194 @@
+:root {
+  --bhol-red: #c4091e;
+  --bhol-text: #333333;
+  --bhol-muted: #20393d;
+  --bhol-line: #cccccc;
+  --gap: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f3f3;
+  font-family: "Heebo", "Arial", sans-serif;
+}
+
+.preview-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  padding: 24px;
+}
+
+/* העמודה עצמה ברוחב 25% עם מרווח של 120px משמאל */
+.left-sidebar {
+  width: 25%;
+   /* מונע מהסיידבר להתכווץ יותר מדי במסכים קטנים */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background: #fff;
+  margin-right: auto;   
+  margin-left: 120px;   
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* הבאנרים יתפסו 100% מהרוחב של הסיידבר (כלומר 25% מהמסך) */
+.banner-item {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.banner-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* גבהים נשארים לפי בחירתך, או שאפשר להפוך גם אותם ליחסיים */
+.banner-item[data-size="346"] { height: 346px; }
+.banner-item[data-size="500"] { height: 500px; }
+.banner-item[data-size="350"] { height: 350px; }
+.banner-item[data-size="300"] { height: 300px; }
+
+/* הווידג'ט מתאים את עצמו לרוחב הסיידבר */
+.most-viewed-widget {
+  width: 100%;
+  background: #fff;
+}
+
+.widget-header {
+  padding: 0 8px 8px;
+  border-bottom: none;
+}
+
+.widget-header h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #05090a;
+  letter-spacing: -0.5px;
+}
+
+.widget-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 8px 0 4px;
+}
+
+.tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 3px 16px 8px;
+  font-family: inherit;
+  font-size: 18px;
+  color: var(--bhol-muted);
+  position: relative;
+}
+
+.tab.active {
+  color: var(--bhol-muted);
+  font-weight: 700;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+  height: 4px;
+  background: var(--bhol-red);
+}
+
+.items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.items-list li {
+  border-bottom: 1px solid var(--bhol-line);
+}
+
+.item-row {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  text-decoration: none;
+  color: inherit;
+  align-items: flex-start;
+}
+
+.item-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--bhol-text);
+}
+
+.item-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777;
+  font-size: 13px;
+}
+
+.item-comments {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.comment-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.item-image {
+  width: 138px;
+  height: 87px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.item-image img {
+  display: block;
+  width: 138px;
+  height: 87px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--bhol-red);
+}
+
+.panel[hidden] {
+  display: none;
+}
