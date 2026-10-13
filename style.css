@@ -1,0 +1,19 @@
+.right-ad{
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    width: 120px;
+    height: 500px;
+}
+
+.left-ad{
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    width: 120px;
+    height: 500px;
+}
+.right-ad img, .left-ad img{
+    width: 100%;
+    height: auto;
+}
