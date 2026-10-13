@@ -337,3 +337,19 @@ article {
     right: 10px;
 }
 
+@media (max-width: 600px) {
+    #menu {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu_ul {
+        flex-wrap: wrap;
+    }
+
+    .menu_li {
+        margin-left: 4px;
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+}

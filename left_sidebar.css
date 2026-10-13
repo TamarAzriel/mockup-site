@@ -92,15 +92,16 @@ body {
 }
 
 .tab {
+  display: inline-block;
   appearance: none;
   border: 0;
   background: transparent;
-  cursor: pointer;
   padding: 3px 16px 8px;
   font-family: inherit;
   font-size: 18px;
   color: var(--bhol-muted);
   position: relative;
+  text-decoration: none;
 }
 
 .tab.active {
@@ -191,4 +192,16 @@ body {
 
 .panel[hidden] {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .banner-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .banner-item[data-size] {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
 }
